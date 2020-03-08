@@ -11,7 +11,7 @@ export const createEmptyIterable = (): AsyncIterator<any> => {
     throw(e: Error) {
       return Promise.reject(e);
     },
-    [$$asyncIterator]() {
+    [$$asyncIterator as any]() {
       return this;
     },
   };
